@@ -11,6 +11,7 @@ from api.views import UserCreateView, StoryListView, StoryDetailView, CommentLis
 urlpatterns = [  
     path('admin/',admin.site.urls),
     path('api/', include('api.urls')),
+    path('parsers/', include('parsers.urls')),
     
 # This view is responsible for handling requests to obtain an access and refresh token.
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
